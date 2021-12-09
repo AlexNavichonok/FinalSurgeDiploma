@@ -1,8 +1,11 @@
 package pages;
 
+import org.openqa.selenium.WebDriver;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class CalendarPage {
+
+    public static final String SCROLL = "//a[@class='scrollup']";
 
     public static final String PLUS_CALENDAR = "//td[@data-day]";
     //public static final String DESEMBR = "//a[@data-day='13'][@data-month='12'][@class='quick-add']";
@@ -243,6 +246,8 @@ public class CalendarPage {
     public static final String DELETE = "//a[@class='quick-delete']";
         public static final String DELETE_OK = "//a[@data-handler='1']";
 
+        WebDriver driver;
+
 
 
     public CalendarPage selectionDay() {
@@ -456,6 +461,11 @@ public class CalendarPage {
 
     public CalendarPage updateGalka() {
         $x(SAVE_TO_LIBRARY_GALKA_VIEW).click();
+        return this;
+    }
+
+    public CalendarPage scroll() {
+        $x(SCROLL).click();
         return this;
     }
 

@@ -20,7 +20,7 @@ public class CaloricNeedsTest extends BaseTest {
         loginSteps
                 .correctLogin(user, password);
         caloricNeedsSteps
-                .errorResult("86", "178", "", "10", "×\n" +
+                .errorResult("86", "178", "4", "10", "×\n" +
                         "Please fix the following errors:\n" +
                         "*Please enter an Integer value for Age.");
     }
