@@ -4,7 +4,7 @@ orbs:
 jobs:
   functional_tests:
     docker:
-      - image: cimg/openjdk:11.0-browsers
+      - image: cimg/openjdk:1.8.0-browsers
     steps:
       - browser-tools/install-browser-tools
       - checkout

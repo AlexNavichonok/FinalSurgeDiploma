@@ -1,39 +1,29 @@
 package tests;
 
+import io.qameta.allure.Attachment;
 import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 
 public class TinmanTest extends BaseTest{
 
-    @Test(description = "Result for Tinman test")
+
+    @Test(description = "The correct result during the calculation of the data")
     @Description()
-    public void shouldBeToCalculateTheTinman() {
-        loginPage
-                .open()
-                .login(user, password);
-        tinmanPage
-                .openWorkoutCalculators()
-                .openChapterTinman()
-                .indicateInRunDistance()
-                .indicateTime("2", "33", "45")
-                .genderSelection()
-                .tinmanSaveButton()
-                .testShouldBeOutputResults();
+    public void correctInputOfValidData() {
+        loginSteps
+                .correctLogin(user, password);
+        tinmanSteps
+                .enterDataTheRaceTime("2", "32", "11");
     }
 
-    @Test(enabled = false, description = "Error entering values for Tinman test")
+    @Test(enabled = false, description = "Error result if we do not enter data")
     @Description()
     public void errorEnteringValues() {
-        loginPage
-                .open()
-                .login(user, password);
-        tinmanPage
-                .openWorkoutCalculators()
-                .openChapterTinman()
-                .indicateInRunDistance()
-                .indicateTime("", "", "")
-                .genderSelection()
-                .tinmanSaveButton()
-                .validateErrorText("Please fix the following errors:");
+        loginSteps
+                .correctLogin(user, password);
+        tinmanSteps
+                .dataEntryError("","","","\"×\\n\" +\n" +
+                        "       \"Please fix the following errors:\\n\" +\n" +
+                        "       \"*Please enter an Integer value for Minutes.\"");
     }
 }

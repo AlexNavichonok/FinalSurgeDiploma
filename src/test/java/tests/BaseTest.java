@@ -18,10 +18,10 @@ public class BaseTest {
     CalendarPage calendarPage;
     LoginPage loginPage;
     CaloricNeedsPage caloricNeedsPage;
-    PaceCalculatorPage pacecalculatoPage;
+    PaceCalculatorPage paceCalculatorPage;
     HansonsPage hansonsPage;
     IntensityPage intensityPage;
-    McMillanPage mcmillanPage;
+    McMillanPage mcMillanPage;
     PalladinoPage palladinoPage;
     TinmanPage tinmanPage;
 
@@ -52,10 +52,10 @@ public class BaseTest {
 
         loginPage = new LoginPage();
         caloricNeedsPage = new CaloricNeedsPage();
-        pacecalculatoPage = new PaceCalculatorPage();
+        paceCalculatorPage = new PaceCalculatorPage();
         hansonsPage = new HansonsPage();
         intensityPage = new IntensityPage();
-        mcmillanPage = new McMillanPage();
+        mcMillanPage = new McMillanPage();
         palladinoPage = new PalladinoPage();
         tinmanPage = new TinmanPage();
         calendarPage = new CalendarPage();

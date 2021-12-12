@@ -13,8 +13,8 @@ public class HansonsSteps {
 
     @Step("Calculation of results at data")
     public HansonsSteps calculationData (String dis, String hh, String mm,
-                                        String ss, String temp, String humidity,
-                                        String speed) {
+                                         String ss, String temp, String humidity,
+                                         String speed) {
         hansonsPage
                 .openWorkoutCalculators()
                 .openChapterHansons()
