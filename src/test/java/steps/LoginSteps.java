@@ -5,13 +5,11 @@ import lombok.extern.log4j.Log4j2;
 import pages.CalendarPage;
 import pages.LoginPage;
 
-
 @Log4j2
 public class LoginSteps {
 
     LoginPage loginPage;
     CalendarPage calendarPage;
-
 
     public LoginSteps() {
         loginPage = new LoginPage();

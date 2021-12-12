@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class CaloricNeedsTest extends BaseTest {
 
-    @Test(description = "Correct result during calorie counting ")
+    @Test(description = "Correct result during calorie counting")
     public void correctInputOfValidData () {
         loginSteps
                 .correctLogin(user, password);

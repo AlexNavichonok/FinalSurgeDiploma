@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 
 public class McMillanTest extends BaseTest {
@@ -14,6 +15,7 @@ public class McMillanTest extends BaseTest {
     }
 
     @Test(enabled = false, description = "Error when comparing expected and optimal data with blank fields")
+    @Description()
     public void fillingInOnlyOptimalData() {
         loginSteps
                 .correctLogin(user, password);

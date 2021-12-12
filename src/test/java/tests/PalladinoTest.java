@@ -70,7 +70,6 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(description = "Error entering values for Palladino in first test")
-    @Description()
     public void errorEnteringValuesResultFirst() {
         loginSteps
                 .correctLogin(user, password);
@@ -82,7 +81,6 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(description = "Error entering values for Palladino in first test")
-    @Description()
     public void errorEnteringValuesResultFirstMinAveragePowerShort() {
         loginSteps
                 .correctLogin(user, password);
@@ -94,7 +92,6 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(description = "Error entering values for Palladino in first test")
-    @Description()
     public void errorEnteringValuesResultFirstMaxAveragePowerShort() {
         loginSteps
                 .correctLogin(user, password);
@@ -106,7 +103,6 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(description = "Error entering values for Palladino in first test")
-    @Description()
     public void errorEnteringValuesResultFirstMinAveragePowerLong() {
         loginSteps
                 .correctLogin(user, password);
@@ -118,7 +114,6 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(description = "Error entering values for Palladino in first test")
-    @Description()
     public void errorEnteringValuesResultFirstMaxAveragePowerLong() {
         loginSteps
                 .correctLogin(user, password);
@@ -130,7 +125,6 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(description = "Error entering values for Palladino in first test")
-    @Description()
     public void errorEnteringValuesResultFirstMaxMinShort() {
         loginSteps
                 .correctLogin(user, password);
@@ -142,7 +136,6 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(description = "Error entering values for Palladino in first test")
-    @Description()
     public void errorEnteringValuesResultFirstMaxSekShort() {
         loginSteps
                 .correctLogin(user, password);
@@ -154,7 +147,6 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(description = "Error entering values for Palladino in first test")
-    @Description()
     public void errorEnteringValuesResultFirstMaxMinLong() {
         loginSteps
                 .correctLogin(user, password);
@@ -166,7 +158,6 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(description = "Error entering values for Palladino in first test")
-    @Description()
     public void errorEnteringValuesResultFirstMaxSekLong() {
         loginSteps
                 .correctLogin(user, password);
@@ -178,7 +169,6 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(description = "Error entering values for Palladino in second test")
-    @Description()
     public void errorEnteringValuesResultSecond() {
         loginSteps
                 .correctLogin(user, password);
@@ -190,7 +180,6 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(description = "Error entering values for Palladino in second test")
-    @Description()
     public void errorEnteringValuesResultMinRaceAvgPowerW() {
         loginSteps
                 .correctLogin(user, password);
@@ -202,7 +191,6 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(description = "Error entering values for Palladino in second test")
-    @Description()
     public void errorEnteringValuesResultMaxRaceAvgPowerW() {
         loginSteps
                 .correctLogin(user, password);
@@ -214,7 +202,6 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(description = "Error entering values for Palladino in second test")
-    @Description()
     public void errorEnteringValuesResultMaxMin() {
         loginSteps
                 .correctLogin(user, password);
@@ -226,7 +213,6 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(description = "Error entering values for Palladino in second test")
-    @Description()
     public void errorEnteringValuesResultMaxSecond() {
         loginSteps
                 .correctLogin(user, password);
@@ -238,6 +224,7 @@ public class PalladinoTest extends BaseTest {
     }
 
     @Test(enabled = false, description = "Error entering values for Palladino in third test")
+    @Description()
     public void errorEnteringValuesResultThird() {
         loginSteps
                 .correctLogin(user, password);

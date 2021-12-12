@@ -8,7 +8,6 @@ public class TinmanTest extends BaseTest{
 
 
     @Test(description = "The correct result during the calculation of the data")
-    @Description()
     public void correctInputOfValidData() {
         loginSteps
                 .correctLogin(user, password);
