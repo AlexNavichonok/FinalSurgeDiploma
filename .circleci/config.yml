@@ -4,7 +4,7 @@ orbs:
 jobs:
   functional_tests:
     docker:
-      - image: cimg/openjdk:11.0-browsers
+      - image: cimg/openjdk:1.8-browsers
     steps:
       - browser-tools/install-browser-tools
       - checkout
@@ -43,6 +43,6 @@ workflows:
           filters:
             branches:
               only:
-                - features
+                - circleci-project-setup
     jobs:
       - functional_tests
