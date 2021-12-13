@@ -42,9 +42,14 @@ public class BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     public void setup(@Optional("chrome") String browser) {
-        Configuration.baseUrl = PropertyReader.getProperty("finalsurge.url");
-        user = PropertyReader.getProperty("finalsurge.user");
-        password = PropertyReader.getProperty("finalsurge.pass");
+
+        Configuration.baseUrl = System.getenv().getOrDefault("FINALSURGE_URL",
+                PropertyReader.getProperty("finalsurge.url"));
+        user = System.getenv().getOrDefault("FINALSURGE_USER",
+                PropertyReader.getProperty("finalsurge.user"));
+        password = System.getenv().getOrDefault("FINALSURGE_PASS",
+                PropertyReader.getProperty("finalsurge.pass"));
+
         Configuration.timeout = 20000;
         Configuration.browser = "chrome";
         Configuration.startMaximized = true;
