@@ -2,11 +2,12 @@ package tests;
 
 import io.qameta.allure.Description;
 import org.testng.annotations.Test;
+import tests.base.Retry;
 
 
 public class PalladinoTest extends BaseTest {
 
-    @Test (description = "Result for Palladino test")
+    @Test (retryAnalyzer = Retry.class, description = "Result for Palladino test")
     public void shouldBeToCalculateThePalladino() {
         loginSteps
                 .correctLogin(user, password);
@@ -19,7 +20,7 @@ public class PalladinoTest extends BaseTest {
                 .cpFromRaceOrTTGreaterThanOrEqualToFortyMinutes("8", "30", "47");
     }
 
-    @Test(description = "Error entering values for Palladino test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino test")
     public void errorEnteringValuesPaceCalculator() {
         loginSteps
                 .correctLogin(user, password);
@@ -29,7 +30,7 @@ public class PalladinoTest extends BaseTest {
                         "*Please enter a value for Critical Power.");
     }
 
-    @Test(description = "Error entering values for Palladino test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino test")
     public void errorEnteringValuesPaceCalculatorMaxCriticalPower() {
         loginSteps
                 .correctLogin(user, password);
@@ -39,7 +40,7 @@ public class PalladinoTest extends BaseTest {
                         "*Critical Power cannot be greater than 500.00.");
     }
 
-    @Test(description = "Error entering values for Palladino test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino test")
     public void errorEnteringValuesPaceCalculatorMinCriticalPower() {
         loginSteps
                 .correctLogin(user, password);
@@ -49,7 +50,7 @@ public class PalladinoTest extends BaseTest {
                         "*Critical Power cannot be less than 100.00.");
     }
 
-    @Test(description = "Error entering values for Palladino test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino test")
     public void errorEnteringValuesPaceCalculatorMaxReserveWorkCapacity() {
         loginSteps
                 .correctLogin(user, password);
@@ -59,7 +60,7 @@ public class PalladinoTest extends BaseTest {
                         "*Reserve Work Capacity cannot be greater than 30.00.");
     }
 
-    @Test(description = "Error entering values for Palladino test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino test")
     public void errorEnteringValuesPaceCalculatorMinReserveWorkCapacity() {
         loginSteps
                 .correctLogin(user, password);
@@ -69,7 +70,7 @@ public class PalladinoTest extends BaseTest {
                         "*Reserve Work Capacity cannot be less than 1.00.");
     }
 
-    @Test(description = "Error entering values for Palladino in first test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino in first test")
     public void errorEnteringValuesResultFirst() {
         loginSteps
                 .correctLogin(user, password);
@@ -80,7 +81,7 @@ public class PalladinoTest extends BaseTest {
                                 "*Please enter a value for Average Power (Short).");
     }
 
-    @Test(description = "Error entering values for Palladino in first test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino in first test")
     public void errorEnteringValuesResultFirstMinAveragePowerShort() {
         loginSteps
                 .correctLogin(user, password);
@@ -91,7 +92,7 @@ public class PalladinoTest extends BaseTest {
                                 "*Average Power (Short) cannot be less than 20.00.");
     }
 
-    @Test(description = "Error entering values for Palladino in first test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino in first test")
     public void errorEnteringValuesResultFirstMaxAveragePowerShort() {
         loginSteps
                 .correctLogin(user, password);
@@ -102,7 +103,7 @@ public class PalladinoTest extends BaseTest {
                                 "*Average Power (Short) cannot be greater than 800.00.");
     }
 
-    @Test(description = "Error entering values for Palladino in first test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino in first test")
     public void errorEnteringValuesResultFirstMinAveragePowerLong() {
         loginSteps
                 .correctLogin(user, password);
@@ -113,7 +114,7 @@ public class PalladinoTest extends BaseTest {
                                 "*Average Power (Long) cannot be less than 20.00.");
     }
 
-    @Test(description = "Error entering values for Palladino in first test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino in first test")
     public void errorEnteringValuesResultFirstMaxAveragePowerLong() {
         loginSteps
                 .correctLogin(user, password);
@@ -124,7 +125,7 @@ public class PalladinoTest extends BaseTest {
                                 "*Average Power (Long) cannot be greater than 800.00.");
     }
 
-    @Test(description = "Error entering values for Palladino in first test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino in first test")
     public void errorEnteringValuesResultFirstMaxMinShort() {
         loginSteps
                 .correctLogin(user, password);
@@ -135,7 +136,7 @@ public class PalladinoTest extends BaseTest {
                                 "*Minutes (Short Test) cannot be greater than 59.");
     }
 
-    @Test(description = "Error entering values for Palladino in first test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino in first test")
     public void errorEnteringValuesResultFirstMaxSekShort() {
         loginSteps
                 .correctLogin(user, password);
@@ -146,7 +147,7 @@ public class PalladinoTest extends BaseTest {
                                 "*Seconds (Short Test) cannot be greater than 59.");
     }
 
-    @Test(description = "Error entering values for Palladino in first test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino in first test")
     public void errorEnteringValuesResultFirstMaxMinLong() {
         loginSteps
                 .correctLogin(user, password);
@@ -157,7 +158,7 @@ public class PalladinoTest extends BaseTest {
                                 "*Minutes (Long Test) cannot be greater than 59.");
     }
 
-    @Test(description = "Error entering values for Palladino in first test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino in first test")
     public void errorEnteringValuesResultFirstMaxSekLong() {
         loginSteps
                 .correctLogin(user, password);
@@ -168,7 +169,7 @@ public class PalladinoTest extends BaseTest {
                                 "*SECONDS (Long Test) cannot be greater than 59.");
     }
 
-    @Test(description = "Error entering values for Palladino in second test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino in second test")
     public void errorEnteringValuesResultSecond() {
         loginSteps
                 .correctLogin(user, password);
@@ -179,7 +180,7 @@ public class PalladinoTest extends BaseTest {
                                 "*Please enter a value for Race Avg Power (W).");
     }
 
-    @Test(description = "Error entering values for Palladino in second test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino in second test")
     public void errorEnteringValuesResultMinRaceAvgPowerW() {
         loginSteps
                 .correctLogin(user, password);
@@ -190,7 +191,7 @@ public class PalladinoTest extends BaseTest {
                                 "*Race Avg Power (W) cannot be less than 20.00.");
     }
 
-    @Test(description = "Error entering values for Palladino in second test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino in second test")
     public void errorEnteringValuesResultMaxRaceAvgPowerW() {
         loginSteps
                 .correctLogin(user, password);
@@ -201,7 +202,7 @@ public class PalladinoTest extends BaseTest {
                                 "*Race Avg Power (W) cannot be greater than 800.00.");
     }
 
-    @Test(description = "Error entering values for Palladino in second test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino in second test")
     public void errorEnteringValuesResultMaxMin() {
         loginSteps
                 .correctLogin(user, password);
@@ -212,7 +213,7 @@ public class PalladinoTest extends BaseTest {
                                 "*Minutes (Race Time) cannot be greater than 59.");
     }
 
-    @Test(description = "Error entering values for Palladino in second test")
+    @Test(retryAnalyzer = Retry.class, description = "Error entering values for Palladino in second test")
     public void errorEnteringValuesResultMaxSecond() {
         loginSteps
                 .correctLogin(user, password);
@@ -221,18 +222,6 @@ public class PalladinoTest extends BaseTest {
                         "50", "×\n" +
                                 "Please fix the following errors:\n" +
                                 "*Seconds (Race Time) cannot be greater than 59.");
-    }
-
-    @Test(enabled = false, description = "Error entering values for Palladino in third test")
-    @Description()
-    public void errorEnteringValuesResultThird() {
-        loginSteps
-                .correctLogin(user, password);
-        palladinoSteps
-                .errorCpFromRaceOrTTGreaterThanOrEqualToFortyMinutes("12", "43", "",
-                        "×\n" +
-                                "Please fix the following errors:\n" +
-                                "*Please enter a value for Race Avg Power (W).");
     }
 }
 

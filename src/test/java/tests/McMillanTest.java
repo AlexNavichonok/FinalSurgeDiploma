@@ -15,7 +15,7 @@ public class McMillanTest extends BaseTest {
     }
 
     @Test(enabled = false, description = "Error when comparing expected and optimal data with blank fields")
-    @Description()
+    @Description("If the calculator is filled out incorrectly, we will get two error conclusions, not one - Bug")
     public void fillingInOnlyOptimalData() {
         loginSteps
                 .correctLogin(user, password);

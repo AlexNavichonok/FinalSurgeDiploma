@@ -1,10 +1,11 @@
 package tests;
 
 import org.testng.annotations.Test;
+import tests.base.Retry;
 
 public class CalendarTest extends BaseTest {
 
-    @Test (description = "Correct data entry to fill in the calendar")
+    @Test (retryAnalyzer = Retry.class, description = "Correct data entry to fill in the calendar")
     public void addAQuickWorkoutWithValidData() {
         loginSteps
                 .correctLogin(user, password);
@@ -20,7 +21,7 @@ public class CalendarTest extends BaseTest {
                 .deleteWorkout();
     }
 
-    @Test(description = "Error when filling in the extreme value of the maximum hh")
+    @Test(retryAnalyzer = Retry.class, description = "Error when filling in the extreme value of the maximum hh")
     public void addDataExceedingTheMaximum() {
         loginSteps
                 .correctLogin(user, password);
@@ -34,7 +35,7 @@ public class CalendarTest extends BaseTest {
                         "*Minimum Heartrate cannot be greater than 300.");
     }
 
-    @Test(description = "Error when filling in the extreme value of the minimum hh")
+    @Test(retryAnalyzer = Retry.class, description = "Error when filling in the extreme value of the minimum hh")
     public void addDataExceedingTheMinimum() {
         loginSteps
                 .correctLogin(user, password);
@@ -48,7 +49,7 @@ public class CalendarTest extends BaseTest {
                         "*Maximum Heartrate cannot be greater than 300.");
     }
 
-    @Test(description = "Error when filling in the extreme value of the average hh")
+    @Test(retryAnalyzer = Retry.class, description = "Error when filling in the extreme value of the average hh")
     public void addDataExceedingTheAverageValue() {
         loginSteps
                 .correctLogin(user, password);

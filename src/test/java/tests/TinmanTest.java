@@ -16,7 +16,7 @@ public class TinmanTest extends BaseTest{
     }
 
     @Test(enabled = false, description = "Error result if we do not enter data")
-    @Description()
+    @Description("If the calculator is filled out incorrectly, we do not receive any information about the error - Bug")
     public void errorEnteringValues() {
         loginSteps
                 .correctLogin(user, password);

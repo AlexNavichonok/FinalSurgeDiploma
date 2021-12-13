@@ -2,6 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="FinalSurge Test suite" parallel="tests" thread-count="2">
 
+    <listeners>
+        <listener class-name="tests.base.AnnotationTransformer"/>
+    </listeners>
+
     <test name="Login Test">
         <parameter name="browser" value="chrome"/>
         <classes>
